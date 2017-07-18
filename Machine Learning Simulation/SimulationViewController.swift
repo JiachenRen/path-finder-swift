@@ -29,18 +29,16 @@ class SimulationViewController: NSViewController, SimulationDelegate, Simulation
         simulation.respawn()
     }
     
-    @IBAction func appearanceRadioButtonChanged(_ sender: NSButton) {
-//        let isOn = sender.state == 1
-        sender.state = (sender.state == 1 ? 0 : 1)
-        debugPrint(sender.state)
-//        switch sender.title {
-//        case "HeadVisible":
-//            Mouse.headVisible = isOn
-//        case "TailVisible":
-//            Mouse.tailVisible = isOn
-//        default:
-//            break
-//        }
+    @IBAction func appearanceCheckboxChanged(_ sender: NSButton) {
+        let isOn = sender.state == 1
+        switch sender.title {
+        case "HeadVisible":
+            Mouse.headVisible = isOn
+        case "TailVisible":
+            Mouse.tailVisible = isOn
+        default:
+            break
+        }
     }
     
 
