@@ -3,7 +3,9 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -664,10 +666,10 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA" customClass="SimulationWindow" customModule="Machine_Learning_Simulation" customModuleProvider="target">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="551" height="303"/>
+                        <rect key="contentRect" x="479" y="192" width="800" height="600"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
@@ -683,18 +685,107 @@
             <objects>
                 <viewController title="Machine Learning Simulation" id="XfG-lQ-9wD" customClass="SimulationViewController" customModule="Machine_Learning_Simulation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="494"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="FFD-LE-KZV" customClass="SimulationView" customModule="Machine_Learning_Simulation" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                                <rect key="frame" x="0.0" y="49.5" width="640" height="395"/>
+                            </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="ypH-79-gdi">
+                                <rect key="frame" x="648" y="49.5" width="144" height="395"/>
+                                <subviews>
+                                    <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhU-pR-a32">
+                                        <rect key="frame" x="4" y="257" width="136" height="138"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSK-Ks-FAX">
+                                                <rect key="frame" x="-2" y="121" width="56" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Controls" id="qCA-3x-7si">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Lqd-Tc-Gar">
+                                                <rect key="frame" x="-6" y="87" width="84" height="32"/>
+                                                <buttonCell key="cell" type="push" title="Restart" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PLh-tK-YNQ">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="restartButtonPressed:" target="XfG-lQ-9wD" id="Eux-N6-EzF"/>
+                                                </connections>
+                                            </button>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cWE-A8-KhI">
+                                                <rect key="frame" x="-6" y="60" width="101" height="32"/>
+                                                <buttonCell key="cell" type="push" title="Re-spawn" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Cru-iI-cvR">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="respawnButtonPressed:" target="XfG-lQ-9wD" id="mJP-ML-S5g"/>
+                                                </connections>
+                                            </button>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiA-HJ-psU">
+                                                <rect key="frame" x="-2" y="44" width="77" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Appearance" id="Pxa-nk-x7u">
+                                                    <font key="font" metaFont="system"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <button translatesAutoresizingMaskIntoConstraints="NO" id="zsf-9L-VIC">
+                                                <rect key="frame" x="-1" y="21" width="95" height="18"/>
+                                                <buttonCell key="cell" type="radio" title="HeadVisible" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="VPq-F2-Rkw">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="appearanceRadioButtonChanged:" target="XfG-lQ-9wD" id="mIU-4B-fnR"/>
+                                                </connections>
+                                            </button>
+                                            <button translatesAutoresizingMaskIntoConstraints="NO" id="Alx-8c-xRO">
+                                                <rect key="frame" x="-1" y="-1" width="83" height="18"/>
+                                                <buttonCell key="cell" type="radio" title="TailVisible" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="MbI-6d-z6V">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="0i6-Bf-xcu"/>
+                                    <constraint firstAttribute="trailing" secondItem="fhU-pR-a32" secondAttribute="trailing" constant="4" id="5IN-DC-vmI"/>
+                                    <constraint firstItem="fhU-pR-a32" firstAttribute="top" secondItem="ypH-79-gdi" secondAttribute="top" id="JVh-Lm-vOC"/>
+                                    <constraint firstItem="fhU-pR-a32" firstAttribute="leading" secondItem="ypH-79-gdi" secondAttribute="leading" constant="4" id="XNp-kD-a9U"/>
+                                </constraints>
                             </customView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="FFD-LE-KZV" secondAttribute="bottom" id="19g-Oa-Z57"/>
-                            <constraint firstItem="FFD-LE-KZV" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="FPK-Dm-ubn"/>
-                            <constraint firstItem="FFD-LE-KZV" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="ycy-7A-u35"/>
-                            <constraint firstAttribute="trailing" secondItem="FFD-LE-KZV" secondAttribute="trailing" id="z6o-5K-vYN"/>
+                            <constraint firstItem="FFD-LE-KZV" firstAttribute="height" secondItem="m2S-Jp-Qdl" secondAttribute="height" multiplier="0.8" id="2Cn-U2-7Di"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ypH-79-gdi" secondAttribute="trailing" constant="8" id="8gf-Jd-2bf"/>
+                            <constraint firstItem="ypH-79-gdi" firstAttribute="top" secondItem="FFD-LE-KZV" secondAttribute="top" id="Mh9-rz-UNe"/>
+                            <constraint firstItem="ypH-79-gdi" firstAttribute="leading" secondItem="FFD-LE-KZV" secondAttribute="trailing" constant="8" id="Qg3-dD-yUj"/>
+                            <constraint firstItem="FFD-LE-KZV" firstAttribute="width" secondItem="m2S-Jp-Qdl" secondAttribute="width" multiplier="0.8" priority="750" id="exs-6D-SPJ"/>
+                            <constraint firstItem="ypH-79-gdi" firstAttribute="height" secondItem="FFD-LE-KZV" secondAttribute="height" id="mpO-qs-c0H"/>
+                            <constraint firstItem="FFD-LE-KZV" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="p9k-Pn-CWj"/>
+                            <constraint firstItem="FFD-LE-KZV" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="tba-E1-tl8"/>
                         </constraints>
                     </view>
                     <connections>
@@ -703,7 +794,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="907"/>
+            <point key="canvasLocation" x="75" y="1520"/>
         </scene>
     </scenes>
 </document>

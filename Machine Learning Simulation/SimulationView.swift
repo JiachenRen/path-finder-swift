@@ -44,8 +44,8 @@ import Cocoa
         CGContext.fillCircle(center: simulation.destination, radius: simulation.targetRadius)
     }
     
-    override func resize(withOldSuperviewSize oldSize: NSSize) {
-        super.resize(withOldSuperviewSize: oldSize)
+    override func viewDidEndLiveResize() {
+        super.viewDidEndLiveResize()
         delegate?.simulationViewDidResize(newSize: self.bounds.size)
     }
     

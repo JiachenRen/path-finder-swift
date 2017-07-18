@@ -8,20 +8,18 @@
 
 import Foundation
 
-public class Simulation {
+public class Simulation: SimulationProtocol {
     var obstacles = [Obstacle]()
     var mice: [Mouse]!
     var offset: CGFloat = 100
-    var targetRadius: CGFloat = 35
+    var targetRadius: CGFloat = 25
     var breeder: Breeder!
     var origin: CGPoint!
     var destination: CGPoint!
     var loop: Timer?
     var delegate: SimulationDelegate?
     
-    var window: NSSize = NSSize(width: 800, height: 600) {
-        didSet {initialize()}
-    }
+    var window: NSSize = NSSize(width: 800, height: 600)
     
     static let sharedInstance: Simulation =  {
         let sim = Simulation()
@@ -31,7 +29,7 @@ public class Simulation {
 
     
     public func initialize() {
-        self.obstacles = initObstacles(maxLength: 200, minLength: 10, num: 30)
+        self.obstacles = initObstacles(maxLength: window.height/3, minLength: 5, num: 30)
         self.breeder = Breeder(geneLength: 1000, numOffspring: 100)
         defineOrigin()
         defineDestination()
@@ -39,6 +37,11 @@ public class Simulation {
         breeder.destination = destination
         mice = breeder.getInitialGeneration()
         setupSimulationLoop() //starts the simulation!
+    }
+    
+    public func resize(to window: CGSize) {
+        self.window = window
+        self.initialize()
     }
     
     private func setupSimulationLoop() {
@@ -58,11 +61,15 @@ public class Simulation {
             if self.checkCollisionWith(self.destination) {
                 self.initialize()
             } else if self.iterationCompleted() {
-                self.mice = self.breeder.nextGeneration(of: self.mice)
+                self.respawn()
             }
             
             self.delegate?.simulationLoopDidComplete()
         }
+    }
+    
+    public func respawn(){
+        mice = breeder.nextGeneration(of: mice)
     }
     
     private func defineOrigin() {
@@ -74,7 +81,7 @@ public class Simulation {
     
     private func defineDestination() {
         destination = CGPoint(
-            x: CGFloat.random(min: offset, max: offset + targetRadius),
+            x: CGFloat.random(min: 0, max: offset - targetRadius),
             y: CGFloat.random(min: targetRadius, max: window.height - targetRadius)
         )
     }
@@ -118,6 +125,10 @@ public class Simulation {
 
 protocol SimulationDelegate {
     func simulationLoopDidComplete()
+}
+
+protocol SimulationProtocol {
+    var window: CGSize {get}
 }
 
 extension CGFloat {

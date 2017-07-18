@@ -53,12 +53,13 @@ public class Obstacle {
 }
 
 public class Mouse: CustomStringConvertible{
-    static var radius: CGFloat = 15
+    static var radius: CGFloat = 7
     static var maxAcc: CGFloat = 15
     static var tailVisible: Bool = true
+    static var headVisible: Bool = true
     static var color: NSColor = NSColor.green
     static var path: NSBezierPath = getPath()
-    static var tailLineWidth: CGFloat = 0.5
+    static var tailLineWidth: CGFloat = 0.1
     static var lineWidth: CGFloat = 2 {
         didSet {
             path = getPath()
@@ -113,19 +114,25 @@ public class Mouse: CustomStringConvertible{
     
     public func display(_ ctx: CGContext) {
         if Mouse.tailVisible {drawTail(ctx)}
+        if !Mouse.headVisible {return}
         ctx.saveGState()
         ctx.translateBy(x: pos.x, y: pos.y)
         ctx.rotate(by: self.dir.heading() + CGFloat.pi / 2)
         Mouse.color.setStroke()
+        NSColor.white.setFill()
+        Mouse.path.fill()
         Mouse.path.stroke()
         ctx.restoreGState()
     }
     
     private func drawTail(_ ctx: CGContext) {
+        if prevPos.count == 0 {return}
         let tailPath = NSBezierPath()
         tailPath.move(to: prevPos[0].cgPoint)
         for i in 1..<prevPos.count {
             tailPath.line(to: prevPos[i].cgPoint)
+//            Mouse.color.setFill()
+//            CGContext.fillCircle(center: prevPos[i].cgPoint, radius: 2)
         }
         tailPath.lineWidth = Mouse.tailLineWidth
         Mouse.color.setStroke()
@@ -142,7 +149,7 @@ public class Mouse: CustomStringConvertible{
             return
         }
         let heading = gene.steers[curSteeringIndex].nextDirection()
-        let _ = self.pos.add(dir.add(heading))
+        let _ = self.pos.add(dir.add(heading).limit(Mouse.maxAcc))
         if Mouse.tailVisible {
             prevPos.append(Vec2D(point: pos.cgPoint))
         }
