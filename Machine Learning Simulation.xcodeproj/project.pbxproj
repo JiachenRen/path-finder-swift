@@ -76,6 +76,7 @@
 		3258A0471F1D2750001A3289 /* Machine Learning Simulation */ = {
 			isa = PBXGroup;
 			children = (
+				3217B2601F1DCFCB0055A7CF /* Genetics.swift */,
 				3258A05C1F1D334E001A3289 /* Model */,
 				3258A0591F1D2A4E001A3289 /* Lib */,
 				3258A04A1F1D2750001A3289 /* SimulationViewController.swift */,
@@ -98,7 +99,6 @@
 		3258A05C1F1D334E001A3289 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3217B2601F1DCFCB0055A7CF /* Genetics.swift */,
 				3258A05D1F1D3376001A3289 /* Components.swift */,
 				3258A05F1F1D38B7001A3289 /* Simulation.swift */,
 				3217B25C1F1D9AE10055A7CF /* Breeder.swift */,
