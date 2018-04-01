@@ -11,6 +11,9 @@ import Cocoa
 @IBDesignable class SimulationView: NSView {
     @IBInspectable var originColor: NSColor = NSColor.green.withAlphaComponent(0.5)
     @IBInspectable var destinationColor: NSColor = NSColor.red.withAlphaComponent(0.5)
+    @IBInspectable var contourVisible: Bool = true
+    @IBInspectable var contourColor: NSColor = NSColor.black.withAlphaComponent(0.5)
+    @IBInspectable var contourLineWidth: CGFloat = 2
     
     var delegate: SimulationViewDelegate?
     var context: NSGraphicsContext? {return NSGraphicsContext.current()}
@@ -50,8 +53,15 @@ import Cocoa
     }
     
     private func drawBackground(color: NSColor){
+        let path = NSBezierPath(rect: bounds)
         color.setFill()
-        NSBezierPath(rect: bounds).fill()
+        path.fill()
+        
+        if contourVisible {
+            path.lineWidth = contourLineWidth
+            contourColor.setStroke()
+            path.stroke()
+        }
     }
     
 }

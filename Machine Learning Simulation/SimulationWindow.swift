@@ -9,6 +9,7 @@
 import Cocoa
 
 class SimulationWindow: NSWindow {
+    
     override func keyDown(with event: NSEvent) {
         switch event.keyCode {
         case 0xf: Simulation.sharedInstance.initialize()

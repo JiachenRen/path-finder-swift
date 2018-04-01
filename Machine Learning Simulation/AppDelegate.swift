@@ -11,6 +11,17 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    @IBAction func actionMenuItemTriggered(_ sender: NSMenuItem) {
+        switch sender.title {
+        case "Restart":
+            Simulation.sharedInstance.initialize()
+        case "Re-spawn":
+            Simulation.sharedInstance.respawn()
+        default:
+            debugPrint(sender.title)
+        }
+        
+    }
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {

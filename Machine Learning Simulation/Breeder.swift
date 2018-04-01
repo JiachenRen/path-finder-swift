@@ -72,7 +72,7 @@ public class Breeder {
         while Double(viable.count) / Double(numOffspring) <= perc {
             viable.append(gen.remove(at: 0))
         }
-        viable.forEach{debugPrint($0)}
+//        viable.forEach{debugPrint($0)}
         return viable
     }
     

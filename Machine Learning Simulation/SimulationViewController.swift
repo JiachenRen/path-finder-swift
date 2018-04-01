@@ -18,8 +18,11 @@ class SimulationViewController: NSViewController, SimulationDelegate, Simulation
         simulation.delegate = self
         simulationView.delegate = self
         simulation.resize(to: simulationView.bounds.size)
+        view.setNeedsDisplay(view.bounds)
         // Do any additional setup after loading the view.
     }
+    
+    
     
     @IBAction func restartButtonPressed(_ sender: NSButton) {
         simulation.initialize()
