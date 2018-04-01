@@ -7,35 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3217B25D1F1D9AE10055A7CF /* Breeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3217B25C1F1D9AE10055A7CF /* Breeder.swift */; };
-		3217B2611F1DCFCB0055A7CF /* Genetics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3217B2601F1DCFCB0055A7CF /* Genetics.swift */; };
 		3217B2631F1DD79A0055A7CF /* SimulationWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3217B2621F1DD79A0055A7CF /* SimulationWindow.swift */; };
 		3217B2651F1EC9DF0055A7CF /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3217B2641F1EC9DF0055A7CF /* ParentView.swift */; };
-		3258A0491F1D2750001A3289 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3258A0481F1D2750001A3289 /* AppDelegate.swift */; };
 		3258A04B1F1D2750001A3289 /* SimulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3258A04A1F1D2750001A3289 /* SimulationViewController.swift */; };
-		3258A04D1F1D2750001A3289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3258A04C1F1D2750001A3289 /* Assets.xcassets */; };
 		3258A0501F1D2750001A3289 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3258A04E1F1D2750001A3289 /* Main.storyboard */; };
 		3258A0581F1D280B001A3289 /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3258A0571F1D280B001A3289 /* SimulationView.swift */; };
-		3258A05B1F1D2A6B001A3289 /* Vec2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3258A05A1F1D2A6B001A3289 /* Vec2D.swift */; };
-		3258A05E1F1D3376001A3289 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3258A05D1F1D3376001A3289 /* Components.swift */; };
-		3258A0601F1D38B7001A3289 /* Simulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3258A05F1F1D38B7001A3289 /* Simulation.swift */; };
+		33F7552D000BDD767999D975 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F75C5093C8A647A4B9F941 /* Components.swift */; };
+		33F7555201B350983002BEDD /* Genetics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F75746B4672B845953CC8A /* Genetics.swift */; };
+		33F75774E4DA8608C10000BE /* Vec2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F750AE2CAB2C9CCB468EDB /* Vec2D.swift */; };
+		33F758AE22E57F2A19DDA711 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F75B436A786F29E962EE4A /* AppDelegate.swift */; };
+		33F758F7A326EEA79FB6276B /* Breeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7538777A5618E80D97DEE /* Breeder.swift */; };
+		33F75E40C436D816EE3E4D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F758E04A4A79BDB808CA1D /* Assets.xcassets */; };
+		33F75E912A4757AD1FDD53F3 /* Simulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F7549D19713F1EEF6A46CE /* Simulation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3217B25C1F1D9AE10055A7CF /* Breeder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Breeder.swift; sourceTree = "<group>"; };
-		3217B2601F1DCFCB0055A7CF /* Genetics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Genetics.swift; path = ../Genetics.swift; sourceTree = "<group>"; };
 		3217B2621F1DD79A0055A7CF /* SimulationWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulationWindow.swift; sourceTree = "<group>"; };
 		3217B2641F1EC9DF0055A7CF /* ParentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
 		3258A0451F1D2750001A3289 /* Machine Learning Simulation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Machine Learning Simulation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3258A0481F1D2750001A3289 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3258A04A1F1D2750001A3289 /* SimulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationViewController.swift; sourceTree = "<group>"; };
-		3258A04C1F1D2750001A3289 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3258A04F1F1D2750001A3289 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3258A0511F1D2750001A3289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3258A0571F1D280B001A3289 /* SimulationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulationView.swift; sourceTree = "<group>"; };
-		3258A05A1F1D2A6B001A3289 /* Vec2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vec2D.swift; sourceTree = "<group>"; };
-		3258A05D1F1D3376001A3289 /* Components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
-		3258A05F1F1D38B7001A3289 /* Simulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simulation.swift; sourceTree = "<group>"; };
+		33F750AE2CAB2C9CCB468EDB /* Vec2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vec2D.swift; sourceTree = "<group>"; };
+		33F7538777A5618E80D97DEE /* Breeder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Breeder.swift; sourceTree = "<group>"; };
+		33F754083C39DBCB78854A3E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		33F7549D19713F1EEF6A46CE /* Simulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simulation.swift; sourceTree = "<group>"; };
+		33F75746B4672B845953CC8A /* Genetics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genetics.swift; sourceTree = "<group>"; };
+		33F758E04A4A79BDB808CA1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33F75B436A786F29E962EE4A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		33F75C5093C8A647A4B9F941 /* Components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,16 +49,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3217B2171F1D48330055A7CF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3258A0481F1D2750001A3289 /* AppDelegate.swift */,
-				3258A04C1F1D2750001A3289 /* Assets.xcassets */,
-				3258A0511F1D2750001A3289 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		3258A03C1F1D2750001A3289 = {
 			isa = PBXGroup;
 			children = (
@@ -78,35 +68,37 @@
 		3258A0471F1D2750001A3289 /* Machine Learning Simulation */ = {
 			isa = PBXGroup;
 			children = (
-				3258A05C1F1D334E001A3289 /* Model */,
-				3258A0591F1D2A4E001A3289 /* Lib */,
 				3258A04A1F1D2750001A3289 /* SimulationViewController.swift */,
 				3258A04E1F1D2750001A3289 /* Main.storyboard */,
-				3217B2171F1D48330055A7CF /* Supporting Files */,
 				3258A0571F1D280B001A3289 /* SimulationView.swift */,
 				3217B2641F1EC9DF0055A7CF /* ParentView.swift */,
 				3217B2621F1DD79A0055A7CF /* SimulationWindow.swift */,
+				33F75E68E25B7B74E5D6DAE9 /* Util */,
+				33F7593E276CEE856B26596A /* Model */,
+				33F75B436A786F29E962EE4A /* AppDelegate.swift */,
+				33F754083C39DBCB78854A3E /* Info.plist */,
+				33F758E04A4A79BDB808CA1D /* Assets.xcassets */,
 			);
 			path = "Machine Learning Simulation";
 			sourceTree = "<group>";
 		};
-		3258A0591F1D2A4E001A3289 /* Lib */ = {
+		33F7593E276CEE856B26596A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3258A05A1F1D2A6B001A3289 /* Vec2D.swift */,
+				33F75746B4672B845953CC8A /* Genetics.swift */,
+				33F7549D19713F1EEF6A46CE /* Simulation.swift */,
+				33F7538777A5618E80D97DEE /* Breeder.swift */,
+				33F75C5093C8A647A4B9F941 /* Components.swift */,
 			);
-			name = Lib;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		3258A05C1F1D334E001A3289 /* Model */ = {
+		33F75E68E25B7B74E5D6DAE9 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				3217B2601F1DCFCB0055A7CF /* Genetics.swift */,
-				3258A05D1F1D3376001A3289 /* Components.swift */,
-				3258A05F1F1D38B7001A3289 /* Simulation.swift */,
-				3217B25C1F1D9AE10055A7CF /* Breeder.swift */,
+				33F750AE2CAB2C9CCB468EDB /* Vec2D.swift */,
 			);
-			name = Model;
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,8 +161,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3258A04D1F1D2750001A3289 /* Assets.xcassets in Resources */,
 				3258A0501F1D2750001A3289 /* Main.storyboard in Resources */,
+				33F75E40C436D816EE3E4D4E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,16 +173,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3217B25D1F1D9AE10055A7CF /* Breeder.swift in Sources */,
 				3258A0581F1D280B001A3289 /* SimulationView.swift in Sources */,
 				3258A04B1F1D2750001A3289 /* SimulationViewController.swift in Sources */,
 				3217B2631F1DD79A0055A7CF /* SimulationWindow.swift in Sources */,
 				3217B2651F1EC9DF0055A7CF /* ParentView.swift in Sources */,
-				3217B2611F1DCFCB0055A7CF /* Genetics.swift in Sources */,
-				3258A05E1F1D3376001A3289 /* Components.swift in Sources */,
-				3258A05B1F1D2A6B001A3289 /* Vec2D.swift in Sources */,
-				3258A0601F1D38B7001A3289 /* Simulation.swift in Sources */,
-				3258A0491F1D2750001A3289 /* AppDelegate.swift in Sources */,
+				33F75774E4DA8608C10000BE /* Vec2D.swift in Sources */,
+				33F7555201B350983002BEDD /* Genetics.swift in Sources */,
+				33F75E912A4757AD1FDD53F3 /* Simulation.swift in Sources */,
+				33F758F7A326EEA79FB6276B /* Breeder.swift in Sources */,
+				33F7552D000BDD767999D975 /* Components.swift in Sources */,
+				33F758AE22E57F2A19DDA711 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
