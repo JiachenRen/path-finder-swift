@@ -1,5 +1,6 @@
 # Path Finder
-Basic visualization of a path finder implemented using the principles of genetic mutation, process of meiosis and machine learning. Written in Swift by Jiachen Ren. MVC development convention is followed. Written in swift, transcribed from Java.
+Visualization of a path-finding algorithm that is based on the principles of genetic mutation and the process of meiosis. 
+**Written in swift, but the source code was transcribed from Java.**
 
 # Controls
 * press 'r' to restart simulation.
